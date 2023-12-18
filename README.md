@@ -31,7 +31,6 @@ After cloning the repository, navigate to the project directory and execute the 
 This command will start the Streamlit web application locally, allowing you to access the doctor consultation fee prediction interface.
 
 ## Deployment
--
 The application is deployed using Render, providing a live environment to predict consultation fees. Visit the deployed application at: [Doctor_Fee_Predictor](https://doctor-fees-predictor.onrender.com/).
 
 ## Features
