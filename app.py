@@ -16,16 +16,16 @@ def pred_fees(data):
 
 def main():
     st.title("Doctor's Consultation Fees Prediction")
-    exp = st.number_input("Experience (in years)")
-    rating = st.number_input("Rating (out of 100)")
+    exp = st.number_input("Experience (in years)", min_value=0, max_value=66, value=0, step=1)
+    rating = st.number_input("Rating (out of 100)", min_value=0, max_value=100, value=0, step=1)
     profile = st.selectbox("Profile", ['Ayurveda', 'Dentist', 'Dermatologists', 'ENT Specialist', 'General Medicine', 'Homeopath'])
     city = st.selectbox("City", [' Bangalore', ' Chennai', ' Delhi', ' Hyderabad', ' Mumbai', ' Others'])
-    qual = st.number_input("No. of Qualifications")
+    qual = st.number_input("No. of Qualifications", min_value=0, max_value=10, value=0, step=1)
 
     if st.button("Predict Fees"):
         data = [exp, rating, profile, city, qual]
         output = pred_fees(data)
-        st.success("The predicted consultation fees is Rs. {}".format(output))
+        st.success("The predicted fees is Rs. {}".format(round(output)))
 
 if __name__ == '__main__':
     main()
