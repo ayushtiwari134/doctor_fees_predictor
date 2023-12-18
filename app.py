@@ -10,10 +10,6 @@ def pred_fees(data):
     prediction = pipe.predict(array)
     return prediction[0]
 
-# data = [14,94,'Ayurveda',' Bangalore',1]
-# output = pred_fees(data)
-# print(output)
-
 def main():
     st.title("Doctor's Consultation Fees Prediction")
     exp = st.number_input("Experience (in years)", min_value=0, max_value=66, value=0, step=1)
